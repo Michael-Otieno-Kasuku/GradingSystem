@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onjiko Boys High School - Form 3 & Form 4 Page</title>
+
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F0F0; /* Neutral Light Grey */
+            color: #001F3F; /* Deep Blue text */
+        }
+
+        header {
+            background-color: #001F3F; /* Deep Blue */
+            color: #FFFFFF; /* White text */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF; /* White */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #39CCCC; /* Light Blue */
+            color: #001F3F; /* Deep Blue text */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .interactive-area {
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #FFFFFF; /* White */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            background-color: #FF851B; /* Orange */
+            color: #FFFFFF; /* White text */
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #001F3F; /* Deep Blue */
+        }
+
+        th {
+            background-color: #001F3F; /* Deep Blue */
+            color: #FFFFFF; /* White text */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button onclick="goToDashboard()" class="button">Back to Dashboard</button>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Subject Selection</h2>
+            <p>Choose your subjects with our easy drag-and-drop interface and get real-time feedback on the feasibility of your combination.</p>
+            <div id="dragDropInterface" class="interactive-area">
+                <!-- Placeholder for the drag-and-drop interface -->
+                <p>This is where the drag-and-drop interface will be placed.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Marks Entry</h2>
+            <p>Enter your marks for the selected subjects and watch as the system calculates your mean marks and grades automatically.</p>
+            <div id="dynamicFields" class="interactive-area">
+                <!-- Placeholder for dynamic entry fields and automated calculation -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>CycleOneMarks</th>
+                            <th>CycleOneGrade</th>
+                            <th>CycleTwoMarks</th>
+                            <th>CycleTwoGrade</th>
+                            <th>EndTermMarks</th>
+                            <th>EndTermGrade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Placeholder content, replace with dynamic data -->
+                        <tr>
+                            <td>English</td>
+                            <td>eng1</td>
+                            <td></td>
+                            <td>eng2</td>
+                            <td></td>
+                            <td>(eng1 + eng2)/2</td>
+                            <td></td>
+                        </tr>
+                        <!-- Repeat for other subjects -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript functions for navigation and interactivity
+        function goToDashboard() {
+            // Add logic to navigate back to the dashboard
+            console.log('Navigating back to the dashboard');
+        }
+
+        // Placeholder function for drag-and-drop functionality
+        function initializeDragAndDrop() {
+            // Implement drag-and-drop logic here
+            console.log('Drag-and-drop functionality initialized');
+        }
+
+        // Call the initialization function
+        initializeDragAndDrop();
+    </script>
+</body>
+</html>
