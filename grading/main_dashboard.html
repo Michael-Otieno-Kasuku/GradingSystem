@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onjiko Boys High School Examination Grading System</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    header {
+      background-color: #343a40;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav {
+      background-color: #495057;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #ffc107;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    section {
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #343a40;
+    }
+
+    p {
+      color: #6c757d;
+    }
+
+    .subject-tile {
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .subject-tile:hover {
+      background-color: #0056b3;
+    }
+
+    .calendar-term {
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .calendar-term:hover {
+      background-color: #dee2e6;
+    }
+
+    .grading-chart table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .grading-chart th, .grading-chart td {
+      border: 1px solid #dee2e6;
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="school_logo.png" alt="School Logo" height="80">
+    <h1 style="margin-bottom: 0;">Onjiko Boys High School Examination Grading System</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a> | <a href="#">Subjects</a> | <a href="#">Students</a> | <a href="#">Transcripts</a> | <a href="#">Form 3 & Form 4</a> | <a href="#">Logout</a>
+  </nav>
+
+  <!-- Main Content Container -->
+  <div class="container">
+
+    <!-- Overview Section -->
+    <section>
+      <h2>School Overview</h2>
+      <p>Onjiko Boys High School boasts a diverse academic environment with four forms, each comprising six unique streams (e.g., Form 1A, Form 2C).</p>
+    </section>
+
+    <!-- Academic Year Overview -->
+    <section>
+      <h2>Academic Year Overview</h2>
+      <p>Each academic year, such as 2024 or 2025, unfolds in three distinct terms: Term One, Term Two, and Term Three.</p>
+    </section>
+
+    <!-- Academic Year Structure -->
+    <section>
+      <h2>Academic Year Structure</h2>
+      <div id="academic-year-calendar">
+        <!-- Academic year calendar will be dynamically generated here -->
+      </div>
+    </section>
+
+    <!-- Subject Structure (Form 1 & Form 2) -->
+    <section>
+      <h2>Subject Structure (Form 1 & Form 2)</h2>
+      <div class="subject-tile" onclick="showSubjectDetails('English')">English</div>
+      <div class="subject-tile" onclick="showSubjectDetails('Kiswahili')">Kiswahili</div>
+      <div class="subject-tile" onclick="showSubjectDetails('Mathematics')">Mathematics</div>
+      <!-- Add more tiles as needed -->
+      <h2>Grading System Overview</h2>
+      <p>Briefly explain the grading system.</p>
+    </section>
+
+    <!-- Grading System -->
+    <section>
+      <h2>Grading System</h2>
+      <div class="grading-chart" id="grading-chart">
+        <!-- Grading chart will be dynamically generated here -->
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Add more sections as needed -->
+
+  <script>
+    // Generate academic year calendar dynamically
+    const academicYearCalendar = document.getElementById('academic-year-calendar');
+    const terms = ['Term One', 'Term Two', 'Term Three'];
+    const cycles = ['Cycle One', 'Cycle Two'];
+
+    terms.forEach(term => {
+      const termDiv = document.createElement('div');
+      termDiv.classList.add('calendar-term');
+      termDiv.textContent = term;
+
+      cycles.forEach(cycle => {
+        const cycleDiv = document.createElement('div');
+        cycleDiv.textContent = cycle;
+        termDiv.appendChild(cycleDiv);
+      });
+
+      academicYearCalendar.appendChild(termDiv);
+    });
+
+    // Generate grading chart dynamically
+    const gradingChart = document.getElementById('grading-chart');
+    const grades = ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'E'];
+
+    const table = document.createElement('table');
+    const headerRow = document.createElement('tr');
+
+    const headerCell = document.createElement('th');
+    headerCell.textContent = 'Marks Range';
+    headerRow.appendChild(headerCell);
+
+    grades.forEach(grade => {
+      const gradeCell = document.createElement('th');
+      gradeCell.textContent = grade;
+      headerRow.appendChild(gradeCell);
+    });
+
+    table.appendChild(headerRow);
+
+    const marksRange = ['80-100', '75-79', '70-74', '65-69', '60-64', '55-59', '50-54', '45-49', '40-44', '35-39', '30-34', '0-29'];
+
+    marksRange.forEach(range => {
+      const row = document.createElement('tr');
+      const rangeCell = document.createElement('td');
+      rangeCell.textContent = range;
+      row.appendChild(rangeCell);
+
+      grades.forEach(grade => {
+        const cell = document.createElement('td');
+        cell.textContent = 'Example'; // You can replace this with actual grade data
+        row.appendChild(cell);
+      });
+
+      table.appendChild(row);
+    });
+
+    gradingChart.appendChild(table);
+
+    // Your existing JavaScript code remains unchanged
+
+    function showSubjectDetails(subject) {
+      alert('Displaying details for ' + subject);
+      // Add logic to show subject details dynamically
+    }
+  </script>
+</body>
+</html>

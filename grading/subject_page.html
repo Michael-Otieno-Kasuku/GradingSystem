@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects Page - Onjiko Boys High School</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    header {
+      background-color: #343a40;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    header a:hover {
+      color: #ff851b;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    section {
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #343a40;
+      border-bottom: 2px solid #343a40;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #6c757d;
+    }
+
+    .subject-tile {
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .subject-tile:hover {
+      background-color: #0056b3;
+    }
+
+    .details-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .details-section {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .graph-section {
+      flex: 1;
+    }
+
+    /* Add more styles as needed */
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="#">Back to Dashboard</a>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="container">
+
+    <!-- Subject List Section -->
+    <section>
+      <h2>Subject List</h2>
+      <div class="subject-tile" onclick="showSubjectDetails('English')">English</div>
+      <div class="subject-tile" onclick="showSubjectDetails('Kiswahili')">Kiswahili</div>
+      <div class="subject-tile" onclick="showSubjectDetails('Mathematics')">Mathematics</div>
+      <!-- Add more tiles as needed -->
+    </section>
+
+    <!-- Enhanced Subject Details Section -->
+    <section class="details-section">
+      <h2>Enhanced Subject Details</h2>
+      <div class="details-container">
+        <div>
+          <!-- Add detailed subject information here -->
+          <p>Subject assessments follow a dual-phase approach, with marks attributed to Cycle One and Cycle Two.</p>
+          <p>The harmonious blend of Cycle One and Cycle Two marks culminates in the End Term marks, calculated as the average of the two cycles.</p>
+          <p>A bespoke grading system assigns letter grades based on specific grade ranges, ensuring a comprehensive evaluation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Graphical Representation Section -->
+    <section class="graph-section">
+      <h2>Graphical Representation</h2>
+      <!-- Add graphs and charts for subject performance -->
+    </section>
+
+  </div>
+
+  <!-- Add more sections as needed -->
+
+  <script>
+    // Your existing JavaScript code remains unchanged
+
+    function showSubjectDetails(subject) {
+      alert('Displaying details for ' + subject);
+      // Add logic to show subject details dynamically
+    }
+  </script>
+</body>
+</html>

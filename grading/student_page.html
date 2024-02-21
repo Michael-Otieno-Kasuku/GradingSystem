@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onjiko Boys High School - Student Page</title>
+
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light Grey Background */
+            color: #333; /* Dark Grey Text Color */
+        }
+
+        header {
+            background-color: #001F3F; /* Deep Blue */
+            color: #FFFFFF; /* White */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .back-btn {
+            background-color: #3498DB; /* Light Blue */
+            color: #FFFFFF; /* White */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #2E86C1; /* Darker Blue on Hover */
+        }
+
+        .search-filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            width: 65%;
+            padding: 10px;
+            border: 1px solid #ddd; /* Light Grey Border */
+            border-radius: 5px;
+        }
+
+        .stream-select {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ddd; /* Light Grey Border */
+            border-radius: 5px;
+            background-color: #3498DB; /* Light Blue */
+            color: #FFFFFF; /* White */
+        }
+
+        .student-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .student-profile {
+            background-color: #3498DB; /* Light Blue */
+            color: #FFFFFF; /* White */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .student-profile:hover {
+            transform: scale(1.03); /* Slightly Enlarge on Hover */
+        }
+
+        /* Add more styles as needed */
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="back-btn">Back to Dashboard</button>
+        <h1 style="margin-bottom: 0;">Onjiko Boys High School</h1>
+        <p style="margin-top: 5px; font-size: 1.2em;">Student Page</p>
+    </header>
+
+    <div class="container">
+        <div class="search-filter">
+            <input type="text" class="search-box" placeholder="Search by Admission Number">
+            <select class="stream-select">
+                <option value="">All Streams</option>
+                <option value="1A">1A</option>
+                <option value="1B">1B</option>
+                <!-- Add more stream options as needed -->
+            </select>
+        </div>
+
+        <h2 style="color: #001F3F; margin-top: 0;">Student List</h2>
+
+        <div class="student-list">
+            <!-- Student profiles go here -->
+            <div class="student-profile">
+                <h3>Student Name</h3>
+                <p>Admission Number: ABC123</p>
+                <p>Overall Position: 1</p>
+                <p>Stream Position: 1A</p>
+                <!-- Additional details like academic performance, attendance, behavior can be added -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
